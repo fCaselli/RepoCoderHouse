@@ -49,6 +49,7 @@ html {
     opacity: 1;
   }
 }
+
 section,
 .nosotros-contenido,
 .servicios-contenido {
@@ -113,6 +114,7 @@ header nav ul {
   gap: 15px;
   padding: 10px 0;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 header nav ul li a {
   color: #ffffff;
@@ -132,25 +134,25 @@ header nav ul li a.activo {
   text-decoration: underline;
 }
 
+/* Sección destacado */
 .destacado {
   display: flex;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 .destacado .texto {
-  flex: 1;
+  flex: 1 1 100%;
 }
 .destacado .imagen {
-  flex: 1;
+  flex: 1 1 100%;
+  text-align: center;
 }
 
-.nosotros-contenido,
-.servicios-contenido {
-  flex-direction: column;
-}
-
+/* Nosotros */
 .nosotros-contenido {
   display: flex;
+  flex-direction: column;
   gap: 40px;
 }
 .nosotros-contenido > div {
@@ -162,8 +164,10 @@ header nav ul li a.activo {
   }
 }
 
+/* Servicios */
 .servicios-contenido {
   display: flex;
+  flex-direction: column;
   gap: 40px;
 }
 .servicios-contenido > div {
@@ -175,9 +179,10 @@ header nav ul li a.activo {
   }
 }
 
+/* Galería */
 .galeria-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
   margin-top: 20px;
 }
@@ -192,6 +197,11 @@ header nav ul li a.activo {
 .galeria-grid img:hover {
   animation: zoomSuave 0.5s forwards;
 }
+@media (min-width: 576px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (min-width: 768px) {
   .galeria-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -203,15 +213,21 @@ header nav ul li a.activo {
   }
 }
 
+/* Contacto */
 .contacto-contenedor {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .contacto-contenedor form,
 .contacto-contenedor iframe {
-  flex: 1 1 45%;
+  flex: 1 1 100%;
+}
+@media (min-width: 768px) {
+  .contacto-contenedor form,
+  .contacto-contenedor iframe {
+    flex: 1 1 45%;
+  }
 }
 
 iframe {
@@ -268,4 +284,22 @@ footer {
   color: #aaaaaa;
 }
 
-/*# sourceMappingURL=style.css.map */
+/* Responsive especial para móviles */
+@media (max-width: 576px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .destacado {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .destacado img {
+    max-width: 100%;
+    height: auto;
+  }
+}
