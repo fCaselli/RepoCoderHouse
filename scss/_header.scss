@@ -1,0 +1,49 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    height: $logo-alto;
+    width: auto;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 10px 0;
+      margin-bottom: 20px;
+
+      li {
+        a {
+          color: $color-texto;
+          text-decoration: none;
+          padding: 5px 10px;
+          transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+          &:hover {
+            background-color: #333;
+            border-radius: 4px;
+            transform: scale(1.1);
+          }
+
+          &.activo {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: $color-acento;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

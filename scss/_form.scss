@@ -1,0 +1,48 @@
+.contacto-contenedor {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  form,
+  iframe {
+    flex: 1 1 45%;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+
+  @media (min-width: 768px) {
+    height: 450px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  animation: aparecerFormulario 1s ease-out;
+
+  input,
+  textarea,
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    background-color: $color-input-fondo;
+    color: $color-texto;
+  }
+
+  button {
+    @include boton($color-acento, $color-boton-texto);
+  }
+}

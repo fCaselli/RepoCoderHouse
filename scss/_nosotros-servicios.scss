@@ -1,0 +1,30 @@
+.nosotros-contenido,
+.servicios-contenido {
+  flex-direction: column;
+}
+
+.nosotros-contenido {
+  display: flex;
+  gap: 40px;
+
+  > div {
+    flex: 1;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.servicios-contenido {
+  display: flex;
+  gap: 40px;
+
+  > div {
+    flex: 1;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}

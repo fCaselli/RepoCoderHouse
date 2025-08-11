@@ -1,0 +1,12 @@
+.destacado {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  .texto {
+    flex: 1;
+  }
+  .imagen {
+    flex: 1;
+  }
+}

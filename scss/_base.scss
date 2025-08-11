@@ -1,0 +1,31 @@
+body {
+  background-color: $color-fondo;
+  color: $color-texto;
+  font-family: $fuente-principal;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 0 40px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 80px;
+  }
+}
+
+h1,
+h2 {
+  color: $color-texto;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
